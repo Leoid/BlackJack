@@ -45,11 +45,6 @@ class Player:
     tb.field_names = [G+"Players","Round","Betting","Score","Credits"+W]
 
     def __init__(self):
-        self.new_game = Game()
-        print(self.new_game[0])
-        self.new_game = Game()
-        print(self.new_game[0])
-        self.new_game = Game()
         self.tb.field_names = [G+"Players","Round","Betting","Score","Credits"+W]
         self.tb.add_row(["Player One",0,0,0,100])
         self.tb.add_row(["Player Two",0,0,0,100])
@@ -61,11 +56,12 @@ class Player:
 
 
     def start_game(self,r):
+        self.new_game = Game()
         self.tb.clear_rows()
         self.clear_all()
 
         if self.one_credit > 0:
-            self.one = self.new_game[0:13]
+            self.one = self.new_game[0:12]
             print(G+"\n[*]"+W+" Initializing Player "+Y+"One"+W+" ...")
             self.one_score = self.check_score(self.one_score,self.one,"One")
             self.one_bet = self.Set_Score(self.one_bet,self.one,"One",self.one_credit)
@@ -95,10 +91,9 @@ class Player:
             self.four_bet = self.Set_Score(self.four_bet,self.four,"Four",self.four_credit)
             self.four_credit -= self.four_bet
             self.round_score += self.four_bet
-
         print("\n")
         self.check_win()
-
+        del self.one[0:13]
         self.tb.add_row(["Player One",r,self.one_bet,self.one_score,self.one_credit])
         self.tb.add_row(["Player Two",r,self.two_bet,self.two_score,self.two_credit])
         self.tb.add_row(["Player Three",r,self.three_bet,self.three_score,self.three_credit])
@@ -201,3 +196,5 @@ if __name__ == "__main__":
     pl = Player()
     pl.start_game(1)
     pl.start_game(2)
+    pl.start_game(3)
+    pl.start_game(4)
