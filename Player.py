@@ -185,7 +185,7 @@ class Player:
                 ╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝ ╚════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
 
                                                                          %s%s
-                        # Developpée par Samar Hajj Hassan
+                        # Developpée par Bitwis3
                               # Jeu de BlackJack
 
 
