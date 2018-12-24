@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Author : Samar Hajj Hassan
+# Author : -
 
 from Cards import *
 from Game import *
